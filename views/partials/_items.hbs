@@ -1,0 +1,23 @@
+<h3>Grocery Items</h3>
+	<ul id="grocery-list">
+		{{#each items}}
+			<div class="form-inline">
+				{{#if state}}
+				<li class="form-item checked" id={{id}}>{{item}}</li>
+
+				{{else}}
+					<li class="form-item" id={{id}}>{{item}}</li>
+				{{/if}}
+				<div class="card border-danger text-danger xsm" id={{id}}>X</div>
+			</div>
+		{{/each}}
+	</ul>
+
+<h5>Add New Item</h5>
+<form action="/api/items" method="POST" class="form-inline mb-4">
+	<div class="form-group">
+		<label for="item"></label>
+		<input class="form-control-sm" name="item" type="text"></input>
+		<input type="submit" value="Add Item" class="btn btn-dark btn-sm">
+	</div>
+</form>

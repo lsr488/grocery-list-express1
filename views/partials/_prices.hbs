@@ -1,0 +1,24 @@
+<h3>Calculator</h3>
+<form action="/api/prices" method="POST" class="form-inline mb-4">
+	<div class="form-group">
+		<label for="price"></label>
+		<input class="form-control-sm" name="price" type="number" step="0.01"></input>
+		<input type="submit" value="Add Price" class="btn btn-dark btn-sm">
+	</div>
+</form>
+
+<h5>Total Cost</h5>
+	<div id="total-costs">
+		<ul>
+			<li class="no-decoration">${{addPrices prices}}</li>
+		</ul>
+	</div>
+
+<h5>Prices</h5>
+	<div id="individual-prices">
+			<ul>
+				{{#each prices}}
+					<li class="no-decoration">${{fixedTwoDecimals price}}</li>
+				{{/each}}
+			</ul>
+	</div>

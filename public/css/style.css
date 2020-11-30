@@ -1,0 +1,20 @@
+li {
+	margin: 5px;
+}
+
+h4 {
+	margin-left: 2em;
+}
+
+.checked {
+	text-decoration: line-through;
+}
+
+.no-decoration {
+	list-style: none;
+}
+
+.xsm {
+	width: 20px;
+	text-align: center;
+}

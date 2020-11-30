@@ -1,0 +1,28 @@
+<h3>Recipes</h3>
+	<ol>
+		{{#each recipes}}
+			{{#if url}}
+				<li><a href="{{url}}" target="_blank">{{name}}</a></li>
+				{{else}}
+					<li>{{name}}</li>
+			{{/if}}
+				{{#if notes}}
+				<ul>
+					<li>{{notes}}</li>
+				</ul>
+				{{/if}}
+		{{/each}}
+	</ol>
+
+<h5>Add New Recipe</h5>
+<form action="/api/recipes" method="POST" class="form-inline mb-4">
+	<div class="form-group">
+		<label for="url">URL</label>
+		<input class="form-control-sm" name="url" type="text"></input>
+		<label for="name">Name</label>
+		<input class="form-control-sm" name="name" type="text"></input>
+		<label for="notes">Notes</label>
+		<input class="form-control-sm" name="notes" type="text"></input>
+		<input type="submit" value="Add Item" class="btn btn-dark btn-sm">
+	</div>
+</form>
