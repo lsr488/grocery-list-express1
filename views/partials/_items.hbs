@@ -3,12 +3,13 @@
 		{{#each items}}
 			<div class="form-inline">
 				{{#if state}}
-				<li class="form-item checked" data-type="item" id={{id}}>{{item}}</li>
+				<li class="form-item checked" data-type="item" contenteditable="false" id={{id}}>{{item}}</li>
 				{{else}}
-					<li class="form-item" data-type="item" id={{id}}>{{item}}</li>
+					<li class="form-item" data-type="item" contenteditable="false" id={{id}}>{{item}}</li>
 				{{/if}}
-				<div class="card border-success text-success xsm mr-2 ml-2" data-id="{{id}}" data-type="edit">E </div>
-				<div class="card border-danger text-danger xsm ml-2" data-id="{{id}}" data-type="delete">X</div>
+				<div class="card border-success text-success xsm mr-2 ml-2" contenteditable="false" id="{{id}}-edit" data-id="{{id}}" data-type="edit">E </div>
+				<div class="card border-danger text-danger xsm ml-2 mr-2" contenteditable="false" id="{{id}}-delete" data-id="{{id}}" data-type="delete">X</div>
+				<div class="card border-primary text-primary mdm ml-2 no-show" id="{{id}}-save" data-type="save">Save</div>
 			</div>
 		{{/each}}
 	</ul>
