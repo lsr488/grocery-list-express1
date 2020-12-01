@@ -44,6 +44,7 @@ router.put('/:id', (req, res) => {
 	if(found) {
 		items.forEach(item => {
 		if(parseInt(item.id) === parseInt(req.body.id) || item.id === req.body.id) {
+				item.item = req.body.item;
 				item.state = req.body.state;
 			}
 		});
