@@ -63,8 +63,10 @@ router.delete('/:id', (req, res) => {
 
 	items.splice(index, 1);
 
-	// res.json(items);
-	res.redirect('/');
+	console.log("updated items on delete:", items);
+
+	res.json(items);
+	// res.redirect('/');
 	return
 });
 
