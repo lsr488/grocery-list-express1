@@ -14,7 +14,16 @@ h4 {
 	list-style: none;
 }
 
+.no-show {
+	display: none !important;
+}
+
 .xsm {
 	width: 20px;
+	text-align: center;
+}
+
+.mdm {
+	width: 45px;
 	text-align: center;
 }
